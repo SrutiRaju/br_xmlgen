@@ -1,0 +1,109 @@
+label {
+    font-weight:600;
+}
+
+.headdiv {
+    background-color:lightsalmon;
+    border-radius:10px 10px 10px 10px;
+    padding-left:30px;
+}
+
+.footdiv {
+    background-color:lightsalmon;
+    border-radius:10px 10px 10px 10px;
+    padding-left:700px;
+}
+
+.radiolabel {
+    padding-left:20px;
+}
+
+.invline {            
+    background-color: lightblue;
+}
+
+.topline{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.bottomline{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.hfield {
+    padding-left:30px;
+    height:5px;
+}        
+
+.dfield {
+    padding-left:20px;
+}
+
+.sdiv {
+    padding-top:10px;
+    background-color: lightpink;
+}
+    
+#wrapper {
+    padding:30px;
+    width:auto;
+    min-width:1000px;
+}
+
+#generate {
+    float:right;
+}
+    
+#cocd {
+    width:100px;
+}
+
+#ponum {
+    width:150px;
+}
+
+#idate {
+    width:200px;
+}
+
+#inum {
+    width:150px;
+}
+
+#icur {
+    width:100px;
+}
+
+#lino1, #lino2, #lino3, #lino4, #lino5 {
+    width:100px;
+}
+
+#item1, #item2, #item3, #item4, #item5 {
+    width:100px;
+}
+
+#dsca1, #dsca2, #dsca3, #dsca4, #dsca5 {
+    width:200px;
+}
+
+#qty1, #qty2, #qty3, #qty4, #qty5 {
+    width:100px;
+}
+
+#uom1, #uom2, #uom3, #uom4, #uom5 {
+    width:50px;
+}
+
+#price1, #price2, #price3, #price4, #price5 {
+    width:100px;
+}
+
+#lamount1, #lamount2, #lamount3, #lamount4, #lamount5 {
+    width:100px;
+}
+
+#linetotal, #stax, #total {
+    width: 150px;
+    border-radius: 5px;
+}

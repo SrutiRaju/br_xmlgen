@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags ADJUST and USE .hfield and .dfield -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+
+        <title>XML Inv Gen</title>
+    </head>
+    
+   <body>
+    <!-- Proceed from PO number onwards -->
+    <div id="wrapper">
+        <h1>XML Invoice Generator <button type="submit" class="btn btn-primary" id="generate">Generate XML Invoice</button></h1>
+        <form>
+            <div class="form-group headdiv">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="nonpo">
+                <label class="form-check-label" for="nonpo">
+                    Check if Non PO Invoice
+                </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <!-- <fieldset> -->
+                <div class="headdiv">
+                    <label>Select Company Code Country</label>
+                    <div id="cty">
+                        <label class="radiolabel">
+                        <input id="usaradio" name="ctyradio" value="usa" type="radio">
+                        United States</label>
+    
+                        <label class="radiolabel">
+                        <input id="canradio" name="ctyradio" value="can" type="radio">
+                        Canada</label>
+                        
+                        <label class="radiolabel">
+                        <input id="mexradio" name="ctyradio" value="mex" type="radio">
+                        Mexico</label>
+                
+                        <label class="radiolabel">
+                        <input id="eurradio" name="ctyradio" value="eur" type="radio">
+                        Europe</label>
+                    </div>
+                </div>
+                <!-- </fieldset> --> 
+            </div>
+            <div class="form-group form-row headdiv">
+                <div class="form-group">
+                    <label for="cocd">Company Code</label>
+                    <input type="text" class="form-control" id="cocd">
+                </div>
+                <div class="form-group hfield">
+                    <label for="ponum">Purchase Order</label>
+                    <input type="text" class="form-control" id="ponum">
+                </div>
+                <div class="form-group hfield">
+                    <label for="vendor">Vendor Name</label>
+                    <input type="text" class="form-control" id="vendor">
+                </div>
+                <div class="form-group hfield">
+                    <label for="idate">Invoice Date</label>
+                    <input type="date" class="form-control" id="idate">
+                </div>
+                <div class="form-group hfield">
+                    <label for="inum">Invoice Number</label>
+                    <input type="text" class="form-control" id="inum">
+                </div>
+                <div class="form-group hfield">
+                    <label for="icur">Currency</label>
+                    <input type="text" class="form-control" id="icur">
+                </div>
+            </div>
+            
+            <!-- <div class="divsep"></div> -->
+
+            <div class="form-row invline topline">
+                <div class="form-group dfield">
+                    <label for="lino1">Line#</label>
+                    <input type="number" class="form-control" id="lino1">
+                </div>
+                <div class="form-group dfield">
+                    <label for="item1">Vendor Item</label>
+                    <input type="text" class="form-control" id="item1">
+                </div>
+                <div class="form-group dfield">
+                    <label for="dsca1">Description</label>
+                    <input type="text" class="form-control" id="dsca1">
+                </div>
+                <div class="form-group dfield">
+                    <label for="qty1">Quantity</label>
+                    <input type="number" class="form-control" id="qty1">
+                </div>
+                <div class="form-group dfield">
+                    <label for="uom1">Unit</label>
+                    <input type="text" class="form-control" id="uom1">
+                </div>
+                <div class="form-group dfield">
+                    <label for="price1">Price</label>
+                    <input type="number" class="form-control" id="price1">
+                </div>
+                <div class="form-group dfield">
+                    <label for="lamount1">Amount</label>
+                    <input type="number" class="form-control" id="lamount1">
+                </div>
+            </div>
+            <div class="form-row invline">
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lino2">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="item2">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="dsca2">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="qty2">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="uom2">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="price2">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lamount2">
+                </div>
+            </div>
+            <div class="form-row invline">
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lino3">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="item3">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="dsca3">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="qty3">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="uom3">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="price3">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lamount3">
+                </div>
+            </div>
+            <div class="form-row invline">
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lino4">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="item4">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="dsca4">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="qty4">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="uom4">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="price4">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lamount4">
+                </div>
+            </div>
+            <div class="form-group form-row invline bottomline">
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lino5">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="item5">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="dsca5">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="qty5">
+                </div>
+                <div class="form-group dfield">
+                    <input type="text" class="form-control" id="uom5">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="price5">
+                </div>
+                <div class="form-group dfield">
+                    <input type="number" class="form-control" id="lamount5">
+                </div>
+            </div>
+            <div class="form-group footdiv">
+                <label >Line Total</label>
+                <input type="number" id="linetotal"><br>
+            
+                <label >&nbspSales Tax</label>
+                <input type="number" id="stax"><br>
+            
+                <label >Inv. Total</label>
+                <input type="number" id="total">
+            </div>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    
+  </body>
+</html>
